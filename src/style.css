@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Press+Start+2P&family=Square+Peg&display=swap');
+
+:root {
+    --grey: #3B3B40;
+    --yellow: #F2CE1B;
+    --dark-yellow:#D9A918;
+    --white: #fff;
+    --orange:#BF610F ;
+    --dark-red:#8C2108;
+    --light-yellow:#e9dfaf;
+  }
+  * { 
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: var(--light-yellow);  
+}
+
+header{
+background-image:linear-gradient(to bottom, var(--dark-yellow),var(--orange));
+min-height: 150px;
+text-align: center;
+padding: 40px;
+}
+#titulo{
+color: var(--grey);
+font-family: 'Press Start 2P';
+text-align: center;
+}
+#foto-coroa{
+    width: 10%;
+}
