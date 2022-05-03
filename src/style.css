@@ -24,6 +24,7 @@ background-image:linear-gradient(to bottom, var(--dark-yellow),var(--orange));
 min-height: 150px;
 text-align: center;
 padding: 40px;
+font-family: 'Oswald', sans-serif;
 }
 #titulo{
 color: var(--grey);
@@ -33,3 +34,44 @@ text-align: center;
 #foto-coroa{
     width: 10%;
 }
+#cardPrincipal{
+    background-color: white;
+    width: 50%;
+    width: 600px;
+    height: 470px;
+    display: block;
+    margin: auto;
+    position: center;
+}
+#textoComparativo{
+    color: var(--grey);
+    font-family: 'Press Start 2P';
+    text-align: center;
+    margin: auto;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+#coparativeSection{
+    flex-direction: row;
+    display: flex;
+}
+
+#cardComparativo1{
+    background-color: white;
+    width: 600px;
+    height: 470px;
+    display: block;
+    margin: auto;
+    flex-wrap: wrap;
+   
+}
+#cardComparativo2{
+    background-color: white;
+    width: 600px;
+    height: 470px;
+    display: block;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;  
+}
+
