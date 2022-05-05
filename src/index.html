@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script> 
   </head>
   <body>
     <header> 
@@ -11,11 +12,17 @@
       <h1 id="titulo"> Pokémon </h1>
       <p> Descubra Qual usar </p>
     </header>
-    
-  <div id="cardPrincipal">
-    <select id="selectPrincipal"></select>
+
+    <div id="formulario">
+     <form action="" class="search" id="pesquisa">
+        <input name="search-input" id="searchInput" list= "pokemons" placeholder="Find your pokémon">
+        <datalist id="pokemons">  </datalist>
+        <button id="search-button"> search </button>
+      </form>
   </div>
-  <div id="textoComparativo"> 
+    
+  <div id="cardPrincipal">  </div>
+  <!-- <div id="textoComparativo"> 
     <h2> Compare seu Pokémon</h2>
   </div>
 <div id="coparativeSection"> 
@@ -25,7 +32,7 @@
       <div id="cardComparativo2"> 
         <select name="pokémon2" id="selectOption2"></select> 
       </div>
-</div> 
+</div>  -->
 
     <div id="root"></div>
 

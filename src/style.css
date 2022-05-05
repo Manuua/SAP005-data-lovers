@@ -34,6 +34,25 @@ text-align: center;
 #foto-coroa{
     width: 10%;
 }
+#formulario{
+    margin: 0 auto;
+    position: center;
+    margin-left:30%;
+    margin-top: 2%;
+}
+
+#searchInput{
+    margin: 0  auto;
+    text-align: center;
+    width: 50%;
+    height: 80%;
+   
+}
+#search-button {
+    background-color: var(--orange);
+    width: 6rem;
+    height: 2rem ;
+}
 #cardPrincipal{
     background-color: white;
     width: 50%;
@@ -42,8 +61,9 @@ text-align: center;
     display: block;
     margin: auto;
     position: center;
+    margin-top: 5%;
 }
-#textoComparativo{
+/* #textoComparativo{
     color: var(--grey);
     font-family: 'Press Start 2P';
     text-align: center;
@@ -73,5 +93,5 @@ text-align: center;
     margin: auto;
     flex-direction: row;
     flex-wrap: wrap;  
-}
+} */
 

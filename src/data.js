@@ -1,15 +1,16 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
-};
+//export const pokemons = () => {
+ // return pokemons;
+//};
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+//export const anotherExample = () => {
+ // return 'OMG';
+//};
 
-{
-  "pokemon": [{
+export {pokemons as default };
+
+const pokemons= [{
     "num": "001",
     "name": "bulbasaur",
     "generation": {
@@ -23960,4 +23961,3 @@ export const anotherExample = () => {
       "candy": "celebi candy"
     }
   }]
-}
