@@ -7,7 +7,6 @@ const finder = document.getElementById("searchInput");
 window.onload = () => {
     dataList();
     show(pokemons);
-    getDetails()
   }
 
 function dataList() {
@@ -19,35 +18,12 @@ function dataList() {
   }
 }
 
-
 function getDetails(pokemonName) {
-  const pokemonDetails = pokemons.find(
+    const pokemonDetails = pokemons.find(
     (pokemon) => pokemon.name == pokemonName);
-  const showName = printDetails(pokemonDetails);
-  answer(showName);
+    const showName = (pokemonDetails.name);
+    answer(showName);
 }
-
-function printDetails(pokemonDetails) {
-  let details = "<ul>";
-  Object.keys(pokemonDetails).forEach((keyDetail) => {
-    if (typeof pokemonDetails[keyDetail] !== "object") {
-    //   details += `<li style={text-align:center} > ${keyDetail} - ${pokemonDetails[keyDetail]}
-      ` <div class="cardList">
-              <img src="${pokemons.img}"/>
-              <h4> ${pokemons.name}</h4>
-              <p>resistant:<br>  ${pokemons.resistant}</p>
-              <p>weaknesses: <br>${pokemons.weaknesses}</p>
-          </div>`;
-        //   ;</li>`;
-    }
-  });
-  details += "</ul>";
-
-  return details;
-  // const showName = ` <p>  o nome do pokemon é : ${(pokemonDetails["about"])} </p> `;
-  // return showName
-}
-
 
 function answer(showName) {
   document.getElementById("cardPrincipal").innerHTML = `${showName}`;
@@ -55,13 +31,15 @@ function answer(showName) {
 
 btnSearch.addEventListener("click", function () {
   getDetails(finder.value);
+  let chooseName = getDetails(finder.value)
+  oneResult(chooseName)
 });
 
 function show (array) {
     const result = document.getElementById("allCards");
     result.innerHTML = "";
     result.innerHTML += `${array.map(pokemons => {
-  return ` <div class="cardList">
+    return ` <div class="cardList">
               <img src="${pokemons.img}"/>
               <h4> ${pokemons.name}</h4>
               <p>resistant:<br>  ${pokemons.resistant}</p>
@@ -70,3 +48,31 @@ function show (array) {
           `;
     }).join("")}`;
 }
+
+function oneResult(chooseName){
+    let CARD_WITH_FIRST_SELECT = document.getElementById("cardPrincipal");
+    CARD_WITH_FIRST_SELECT.innerHTML = "";
+    CARD_WITH_FIRST_SELECT.innerHTML= `${chooseName.map(pokemons => {
+        return ` <div class="cardList">
+                    <img src="${pokemons.img}"/>
+                    <h4> ${pokemons.name}</h4>
+                    <p>resistant:<br>  ${pokemons.resistant}</p>
+                    <p>weaknesses: <br>${pokemons.weaknesses}</p>
+                </div>
+                `;
+          }).join("")}`;
+      }
+
+// function printDetails(selectName) {
+//     const filtro = document.getElementById("principalCard");
+//     filtro.innerHTML = "";
+//     filtro.innerHTML += `${selectName.map(pokemons => {
+//   return ` <div class="select">
+//               <img src="${pokemons.img}"/>
+//               <h4> ${pokemons.name}</h4>
+//               <p>resistant:<br>  ${pokemons.resistant}</p>
+//               <p>weaknesses: <br>${pokemons.weaknesses}</p>
+//           </div>
+//           `;
+//     }).join("")}`;
+// }z
