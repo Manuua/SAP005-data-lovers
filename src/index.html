@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script> 
+    <script type= "module"src="main.js"></script> 
   </head>
   <body>
     <header> 
@@ -12,27 +12,26 @@
       <h1 id="titulo"> Pokémon </h1>
       <p> Descubra Qual usar </p>
     </header>
-
+    <nav> 
+      <a href="#">Home</a>
+      <a href="#"> filtro </a>
+      <a href="#"> Curiosidades</a>
+      <a href="#"> Fale Conosco</a>
+       </nav>
+ 
     <div id="formulario">
      <form action="" class="search" id="pesquisa">
         <input name="search-input" id="searchInput" list= "pokemons" placeholder="Find your pokémon">
         <datalist id="pokemons">  </datalist>
-        <button id="search-button"> search </button>
+        <button type= "button"id="search-button"> search </button>
       </form>
   </div>
-    
-  <div id="cardPrincipal">  </div>
-  <!-- <div id="textoComparativo"> 
-    <h2> Compare seu Pokémon</h2>
+  <div>
+  <div id="cardPrincipal">
+    <div><img class="bolinha" src="imagens/bolinha2.png" alt="bolinha" ></div>
   </div>
-<div id="coparativeSection"> 
-      <div id="cardComparativo1">
-        <select name="pokémon1" id="selectOption1"></select> 
-      </div>
-      <div id="cardComparativo2"> 
-        <select name="pokémon2" id="selectOption2"></select> 
-      </div>
-</div>  -->
+  <div id="secondTitle" class="secondTitle">  <h2> Conheça Todos nossos pokemons</h2></div>
+  <div id="allCards" class="allCards"></div>
 
     <div id="root"></div>
 

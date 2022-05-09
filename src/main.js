@@ -1,52 +1,72 @@
-import pokemons from './data.js';
+import pokemons from "./data.js";
 
+// selecting elements
+const btnSearch = document.getElementById("search-button");
+const finder = document.getElementById("searchInput");
 
-// mostra nome do pokemon na posição zero do array  
-//  for (let pokemon of pokemons ){
-//    console.log(pokemon.pokemons.length) 
-// }
+window.onload = () => {
+    dataList();
+    show(pokemons);
+    getDetails()
+  }
 
-// mostra os 251 itens do array 
-// for (let pokemon of pokemons ){
-//    console.log(pokemon.pokemon)
-//  }
- 
-
-// for (let pokemon of pokemons ){
-//     console.log(pokemon.pokemon[0].about) 
-//  }
-
-//  let array = pokemons;
-//  console.log(array)
-const bntSearch = document.getElementById("search-button")
-const finder =document.getElementById("searchInput")
-
-function dataList (){
-    const list = document.getElementById("pokemons")
-    for (let i =0 ; i < pokemons.length; i++ ){
-    let option = document.createElement('option');
+function dataList() {
+  const list = document.getElementById("pokemons");
+  for (let i = 0; i < pokemons.length; i++) {
+    let option = document.createElement("option");
     option.value = pokemons[i].name;
     list.appendChild(option);
+  }
+}
+
+
+function getDetails(pokemonName) {
+  const pokemonDetails = pokemons.find(
+    (pokemon) => pokemon.name == pokemonName);
+  const showName = printDetails(pokemonDetails);
+  answer(showName);
+}
+
+function printDetails(pokemonDetails) {
+  let details = "<ul>";
+  Object.keys(pokemonDetails).forEach((keyDetail) => {
+    if (typeof pokemonDetails[keyDetail] !== "object") {
+    //   details += `<li style={text-align:center} > ${keyDetail} - ${pokemonDetails[keyDetail]}
+      ` <div class="cardList">
+              <img src="${pokemons.img}"/>
+              <h4> ${pokemons.name}</h4>
+              <p>resistant:<br>  ${pokemons.resistant}</p>
+              <p>weaknesses: <br>${pokemons.weaknesses}</p>
+          </div>`;
+        //   ;</li>`;
     }
+  });
+  details += "</ul>";
+
+  return details;
+  // const showName = ` <p>  o nome do pokemon é : ${(pokemonDetails["about"])} </p> `;
+  // return showName
 }
-dataList()
 
-function getDetails(pokemonName){
-    const pokemonDetails = pokemons.find(({name})=> name == pokemonName)
-    console.log(pokemonDetails)
-    printDetails(pokemonDetails)
+
+function answer(showName) {
+  document.getElementById("cardPrincipal").innerHTML = `${showName}`;
 }
 
-bntSearch.addEventListener('click',function(){
-  getDetails(finder.value)
-})
+btnSearch.addEventListener("click", function () {
+  getDetails(finder.value);
+});
 
-function printDetails(pokemonDetails){
-
-console.log(pokemonDetails["num"])
-    // Object.keys(pokemonDetails).forEach(key => {
-    //     console.log(pokemonDetails[key])
-    // });
-    // document.getElementById('cardPrincipal').innerHTML = `
-    // <p>Sua mensagem é : ${solution}</p>`
+function show (array) {
+    const result = document.getElementById("allCards");
+    result.innerHTML = "";
+    result.innerHTML += `${array.map(pokemons => {
+  return ` <div class="cardList">
+              <img src="${pokemons.img}"/>
+              <h4> ${pokemons.name}</h4>
+              <p>resistant:<br>  ${pokemons.resistant}</p>
+              <p>weaknesses: <br>${pokemons.weaknesses}</p>
+          </div>
+          `;
+    }).join("")}`;
 }

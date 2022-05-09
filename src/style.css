@@ -1,15 +1,15 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Press+Start+2P&family=Square+Peg&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Press+Start+2P&family=Square+Peg&display=swap');
 
 :root {
     --grey: #3B3B40;
-    --yellow: #F2CE1B;
-    --dark-yellow:#D9A918;
+    --yellow: #1b43f2;
+    --dark-yellow:#0c46e7ea;
     --white: #fff;
-    --orange:#BF610F ;
+    --orange:#41aee0 ;
     --dark-red:#8C2108;
-    --light-yellow:#e9dfaf;
+    --light-yellow:#a6d5e2;
   }
   * { 
     margin: 0px;
@@ -26,6 +26,7 @@ text-align: center;
 padding: 40px;
 font-family: 'Oswald', sans-serif;
 }
+
 #titulo{
 color: var(--grey);
 font-family: 'Press Start 2P';
@@ -33,6 +34,24 @@ text-align: center;
 }
 #foto-coroa{
     width: 10%;
+}
+nav{
+    background-color: var(--dark-yellow);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.445);
+}
+nav >a {
+   color:var(--cor0);
+   padding: 10px;
+   border-radius: 5px;
+   text-decoration: none;
+   font-weight: bold;
+   transition-duration: 0,5s;
+   margin: auto;
+}
+nav >a:hover {
+   background-color: var(--yellow);
+   color: var(--orange);
 }
 #formulario{
     margin: 0 auto;
@@ -54,6 +73,7 @@ text-align: center;
     height: 2rem ;
 }
 #cardPrincipal{
+    box-shadow: 10px 10px 10px black;
     background-color: white;
     width: 50%;
     width: 600px;
@@ -62,7 +82,74 @@ text-align: center;
     margin: auto;
     position: center;
     margin-top: 5%;
+    font-size: var(--dark-yellow);
+    border-radius: 10px 20px;   
+    min-width: 150px;
 }
+.bolinha{
+   max-width: 70%;
+   margin-left: 50%;
+   margin-top: -5%;
+   
+}
+.secondTitle{
+    margin-top: 10%;
+    text-align: center;
+    font-family: 'Press Start 2P';
+    background-image:linear-gradient(to bottom, var(--dark-yellow),var(--orange));
+}
+
+.allCards{
+    width: 50%;
+    margin: 5% auto;
+    padding: 10px 10px 25px 5px;  
+    font-weight: bold;
+    flex-wrap: wrap;
+    gap: 8px;
+    display: flex;   
+}
+.cardList{
+    width: 30%;
+    margin: 5% auto;
+    padding: 10px 10px 25px 5px;
+    border-style: solid;
+    border-radius: 9px;
+    border-color:var(--grey); 
+    box-shadow: 50px;
+    font-weight: bold;
+    box-shadow: 10px 10px 10px var(--grey); 
+    display: grid;  
+    min-width: 230px;
+}
+
+      
+    .cardList img {
+        width: 50%;
+         align-items: center;
+    }
+      
+    .cardList h4 {
+        font-family:'Bebas Neue', cursive;
+        font-size: 20px;
+        padding-left: 5px;
+        margin-top: 0px;
+        margin-block-end: 0em;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        background-color: #204597;
+    }
+
+    .cardList p {
+        font-family: 'Bebas Neue', cursive ;
+        text-align: justify;
+        padding-left: 5px;
+        margin-top: 0px;
+        margin-block-end: 0em;
+        color: #1d1e40;
+        
+    }
+
 /* #textoComparativo{
     color: var(--grey);
     font-family: 'Press Start 2P';
