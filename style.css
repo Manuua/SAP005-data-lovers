@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Press+Start+2P&family=Square+Peg&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --grey: #3B3B40;
+    --blue--01: #1b43f2;
+    --blue-02:#0c46e7ea;
+    --white: #fff;
+    --blue:#41aee0 ;
+    --light-blue:#a6d5e2;
+  }
+  /*=============== BASE ===============*/
+  * { 
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: var(--light-blue);  
+}
+
+header{
+background-image:linear-gradient(to bottom, var(--blue--01),var(--blue));
+min-height: 150px;
+text-align: center;
+padding: 40px;
+font-family:'Press Start 2P', sans-serif;
+}
+
+.pokemontitulo{
+    width: 50%;
+}
+nav{
+    background-color: var(--blue--01);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.445);
+}
+nav >a {
+   color:var(--cor0);
+   font-family: 'Press Start 2P';
+   padding: 10px;
+   border-radius: 5px;
+   text-decoration: none;
+   font-weight: bold;
+   transition-duration: 0,5s;
+   margin: auto;
+}
+nav >a:hover {
+   background-color: var(--blue--01);
+   color: var(--blue);
+}
+.formulario{
+    margin: 0 auto;
+    position: center;
+    margin-left:30%;
+    margin-top: 2%;
+}
+
+.searchInput{
+    margin: 0  auto;
+    text-align: center;
+    width: 50%;
+    height: 80%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 10px;
+    border: 2px solid;
+   
+}
+.search-button {
+    background-color: var(--blue);
+    width: 6rem;
+    height: 2rem ;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 10px;
+    border: 2px solid;
+}
+.cardPrincipal{
+    box-shadow: 10px 10px 10px black;
+    background-color: white;
+    width: 50%;
+    width: 600px;
+    height: 470px;
+    display: block;
+    margin: auto;
+    position: center;
+    margin-top: 5%;
+    font-size: var(--blue--01);
+    border-radius: 10px 20px;   
+    min-width: 100px;
+}
+.exclusiveCard img {
+    width: 40%;
+    margin-left: 30%; 
+}
+
+.exclusiveCard h4{
+    text-align: center;
+    background-color: var(--blue);
+    font-size: 2em;
+}
+.exclusiveCard p {
+   
+    font-family: 'Bebas Neue', cursive ;
+    text-align: justify;
+    padding-left: 5px;
+    margin-top: 0px;
+    margin-block-end: 0em;
+    color: #1d1e40;   
+    margin: 1% auto;  
+        
+}
+.bolinha{
+   max-width: 70%;
+   margin-left: 50%;
+   margin-top: -5%;
+   
+}
+.secondTitle{
+    margin-top: 10%;
+    text-align: center;
+    font-family: 'Press Start 2P';
+    background-image:linear-gradient(to bottom, var(--blue--01),var(--blue));
+}
+/*=============== ALL CARDS ===============*/
+.allCards{
+    width: 50%;
+    margin: 5% auto;
+    padding: 10px 10px 25px 5px;  
+    font-weight: bold;
+    flex-wrap: wrap;
+    gap: 8px;
+    display: flex;   
+}
+.cardList{
+    width: 30%;
+    margin: 5% auto;
+    padding: 10px 10px 25px 5px;
+    border-style: solid;
+    border-radius: 9px;
+    border-color:var(--grey); 
+    box-shadow: 50px;
+    font-weight: bold;
+    box-shadow: 10px 10px 10px var(--grey); 
+    display: grid;  
+    min-width: 230px;
+}
+
+.cardList img {
+    width: 50%;
+    align-items: center;
+    }
+      
+.cardList h4 {
+    font-family:'Bebas Neue', cursive;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: 0px;
+    margin-block-end: 0em;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    background-color: #204597;
+    }
+
+.cardList p {
+    font-family: 'Bebas Neue', cursive ;
+    text-align: justify;
+    padding-left: 5px;
+    margin-top: 0px;
+    margin-block-end: 0em;
+    color: #1d1e40;     
+    }
+.footer{
+    text-align: center;
+    font-weight: bold;
+    }
+
+
+
