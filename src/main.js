@@ -23,6 +23,7 @@ function getDetails(pokemonName) {
     (pokemon) => pokemon.name == pokemonName);
     const showName = (pokemonDetails.name);
     answer(showName);
+    oneResult(pokemonDetails)
 }
 
 function answer(showName) {
@@ -31,8 +32,7 @@ function answer(showName) {
 
 btnSearch.addEventListener("click", function () {
   getDetails(finder.value);
-  let chooseName = getDetails(finder.value)
-  oneResult(chooseName)
+  //let chooseName = getDetails(finder.value)
 });
 
 function show (array) {
@@ -49,30 +49,19 @@ function show (array) {
     }).join("")}`;
 }
 
+
+
 function oneResult(chooseName){
     let CARD_WITH_FIRST_SELECT = document.getElementById("cardPrincipal");
     CARD_WITH_FIRST_SELECT.innerHTML = "";
-    CARD_WITH_FIRST_SELECT.innerHTML= `${chooseName.map(pokemons => {
-        return ` <div class="cardList">
-                    <img src="${pokemons.img}"/>
-                    <h4> ${pokemons.name}</h4>
-                    <p>resistant:<br>  ${pokemons.resistant}</p>
-                    <p>weaknesses: <br>${pokemons.weaknesses}</p>
+    CARD_WITH_FIRST_SELECT.innerHTML= ` <div class="exclusiveCard">
+                    <img src="${chooseName.img}"/>
+                    <h4> ${chooseName.name}</h4>
+                    <p>resistant:<br>  ${chooseName.resistant}</p>
+                    <p>weaknesses: <br>${chooseName.weaknesses}</p>
+                    <p>About: <br>${chooseName.about}</p>
                 </div>
                 `;
-          }).join("")}`;
+        
       }
 
-// function printDetails(selectName) {
-//     const filtro = document.getElementById("principalCard");
-//     filtro.innerHTML = "";
-//     filtro.innerHTML += `${selectName.map(pokemons => {
-//   return ` <div class="select">
-//               <img src="${pokemons.img}"/>
-//               <h4> ${pokemons.name}</h4>
-//               <p>resistant:<br>  ${pokemons.resistant}</p>
-//               <p>weaknesses: <br>${pokemons.weaknesses}</p>
-//           </div>
-//           `;
-//     }).join("")}`;
-// }z
